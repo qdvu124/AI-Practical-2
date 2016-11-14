@@ -28,34 +28,33 @@ public class BFTS_Demo {
 */		
 		GoalTest goalTest = new TilesGoalTest();
 		Node root = new Node(null, null, initialConfiguration);
-/*
 		
 		//Testing performances for TreeSearch
 		TreeSearch BfsTreeSearch = new TreeSearch(new BreadthFirstFrontier());
 		Node BfsTreeSolution = BfsTreeSearch.findSolution(root, goalTest);
 		System.out.println("BfsTreeSearch generated " + BfsTreeSearch.nodeGenerated() + " nodes");
 		System.out.println("Maximum frontier size: " + BfsTreeSearch.frontierMaxSize());
-		new NPuzzlePrinting().printSolution(BfsTreeSolution);
+		//new NPuzzlePrinting().printSolution(BfsTreeSolution);
 		
 		TreeSearch DfsTreeSearch = new TreeSearch(new DepthFirstFrontier());
-		Node DfsTreeSolution = DfsTreeSearch.findSolution(root, goalTest);
+		//Node DfsTreeSolution = DfsTreeSearch.findSolution(root, goalTest);
 		System.out.println("DfSTreeSearch generated " + DfsTreeSearch.nodeGenerated() + " nodes");
 		System.out.println("Maximum frontier size: " + DfsTreeSearch.frontierMaxSize());
-		new NPuzzlePrinting().printSolution(DfsTreeSolution);
+		//new NPuzzlePrinting().printSolution(DfsTreeSolution);
 		
 		//Testing performances for GraphSearch
 		GraphSearch BfsGraphSearch = new GraphSearch(new BreadthFirstFrontier());
 		Node BfsGraphSolution = BfsGraphSearch.findSolution(root, goalTest);
 		System.out.println("BfsGraphSearch generated " + BfsGraphSearch.nodeGenerated() + " nodes");
 		System.out.println("Maximum frontier size: " + BfsGraphSearch.frontierMaxSize());
-		new NPuzzlePrinting().printSolution(BfsGraphSolution);
+		//new NPuzzlePrinting().printSolution(BfsGraphSolution);
 		
 		GraphSearch DfsGraphSearch = new GraphSearch(new DepthFirstFrontier());
 		Node DfsGraphSolution = DfsGraphSearch.findSolution(root, goalTest);
 		System.out.println("DfsGraphSearch generated " + DfsGraphSearch.nodeGenerated() + " nodes");
 		System.out.println("Maximum frontier size: " + DfsGraphSearch.frontierMaxSize());
-		new NPuzzlePrinting().printSolution(DfsGraphSolution);
-*/	
+		//new NPuzzlePrinting().printSolution(DfsGraphSolution);
+		
 		AStarFunction aStarFunction = new AStarFunction(new MisplacedTilesHeuristicFunction());
 
 		//Testing performances for A* TreeSearch
@@ -63,14 +62,14 @@ public class BFTS_Demo {
 		Node AStarTreeSolution = AStarTreeSearch.findSolution(root, goalTest);
 		System.out.println("AStarTreeSearch generated " + AStarTreeSearch.nodeGenerated() + " nodes");
 		System.out.println("Maximum frontier size: " + AStarTreeSearch.frontierMaxSize());
-		new NPuzzlePrinting().printSolution(AStarTreeSolution);
+		//new NPuzzlePrinting().printSolution(AStarTreeSolution);
 		
 		//Testing performances for A* Graph Search 
 		GraphSearch AStarGraphSearch = new GraphSearch(new BestFirstFrontier(aStarFunction));
 		Node AStarGraphSolution= AStarGraphSearch.findSolution(root, goalTest);
 		System.out.println("AStarGraphSearch generated " + AStarGraphSearch.nodeGenerated() + " nodes");
 		System.out.println("Maximum frontier size: " + AStarGraphSearch.frontierMaxSize());
-		new NPuzzlePrinting().printSolution(AStarGraphSolution);
+		//new NPuzzlePrinting().printSolution(AStarGraphSolution);
 
 
 	}

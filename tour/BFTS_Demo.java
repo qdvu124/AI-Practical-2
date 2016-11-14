@@ -1,5 +1,6 @@
 package tour;
 
+import search.BestFirstFrontier;
 import search.BreadthFirstFrontier;
 import search.BreadthFirstTreeSearch;
 import search.DepthFirstFrontier;
@@ -47,6 +48,6 @@ public class BFTS_Demo {
 		Node DfsGraphSolution = DfsGraphSearch.findSolution(root, goalTest);
 		new TourPrinting().printSolution(DfsGraphSolution);
 
-
+		BestFirstFrontier bestFirstFrontier = new BestFirstFrontier (new TourHeuristic(romania.getAllCities(), startCity));
 	}
 }

@@ -12,11 +12,12 @@ public class MisplacedTilesHeuristicFunction implements NodeFunction {
 		misplacedCount = 0;
 		// TODO Auto-generated method stub
 		Tiles tiles = (Tiles) node.state;
-		for(int i = 0; i < tiles.tiles.length - 1; i++)
+		for(int i = 0; i < tiles.tiles.length - 1; i++) {
 			if(tiles.tiles[i] != i + 1)
 				misplacedCount++;
-		if(tiles.tiles[tiles.tiles.length - 1] != 0)
-			misplacedCount++;
+		}
+		//if(tiles.tiles[tiles.tiles.length - 1] != 0)
+		//	misplacedCount++;
 		return misplacedCount;
 	}
 
